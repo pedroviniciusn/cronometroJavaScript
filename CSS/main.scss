@@ -1,0 +1,52 @@
+@import 'variables';
+@import 'base';
+@import 'mixin';
+
+body {
+    background: $base-color;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+    height: 100%;
+}
+
+.main {
+    width: 800px;
+    margin: 265px auto;
+    color: $white;
+    text-align: center;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+
+p {
+    font-size: 5rem;
+}
+
+#seconds, #tens {
+    font-size: 5rem;
+}
+
+button {
+    @include corners(5px);
+    background: $base-color;
+    color: $white;
+    border: 1px solid $white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 2.8rem;
+    padding: 18px 10px;
+    width: 180px;
+    margin: 10px;
+    outline: none;
+    &:hover {
+        @include transition;
+        background: $white;
+        border: 1px solid $white;
+        color: $base-color;
+    }
+}
